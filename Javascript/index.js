@@ -118,7 +118,7 @@ function createCards(issues) {
         <div class="flex justify-between mb-3">
 
             <div>
-                <img src="/assets/${UpdatestatusImg}">
+                <img src="assets/${UpdatestatusImg}">
             </div>
 
             <div class="priority-box rounded-sm bg-red-300 px-2 text-[10px] text-red-600">
