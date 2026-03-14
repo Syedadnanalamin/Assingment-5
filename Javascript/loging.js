@@ -30,7 +30,7 @@ function checkpass(userpass) {
 
     if (userpass === defaultpass) {
 
-        window.location.href = "index.html";
+        window.location.href = "home.html";
     }
 
     else {

@@ -5,147 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <!-- daisy && tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="bg-[#E4E4E7] h-full">
+<body>
 
-    <!-- navbar section-->
-    <header>
-        <div class="navbar bg-base-100 shadow-sm">
-            <div class="flex-1">
-                <div class="flex  items-center">
-                    <img src="/assets/github-logo.png" alt="" class="h-10">
-                    <a class="btn btn-ghost text-xl">Github Issue Tracker</a>
-                </div>
+    <section class="max-w-lg  h-screen mx-auto flex flex-col items-center  mt-5 bg-white rounded-xl shadow-lg p-6">
+
+
+        <header class="w-xs h-40 flex flex-col  items-center ">
+            <div class="logo h-20 w-20 mx-auto">
+                <img src="/assets/github-logo.png" alt="">
             </div>
-            <div class="flex gap-2">
-                <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+            <h1>Github Issue Tracker</h1>
+            <h2>Sign in to manage your issues</h2>
+        </header>
 
-                <button class="btn bg-primary text-white">+ New Issue</button>
+        <!-- input field -->
+        <fieldset class="fieldset  border-base-300 border-none w-xs border p-4">
 
+
+            <label class="label">Username</label>
+            <input type="text" class="input" placeholder="Enter Username" id="username" />
+            <p class="text-[#4A00FF]">Default: admin</p>
+
+            <label class="label">Password</label>
+            <input type="password" class="input" placeholder=" Enter Password" id="password" />
+            <p class="text-[#4A00FF]">Default: admin123</p>
+
+            <button class="btn btn-neutral mt-4" id="logingbtn">Login</button>
+            <div class="flex flex-col items-center">
+                <p class="font-bold">OR</p>
+                <p>Demo credentials:</p>
+                <br>
+                <p>
+                    <span class="font-semibold">Username: </span>admin
+                </p>
+                <p><span class="font-semibold">Password: </span>admin123</p>
             </div>
-        </div>
-    </header>
-
-    <!-- all report section -->
-
-    <section class="w-4/5  bg-white  shadow-lg mx-auto mt-14 p-4 rounded-sm">
-
-        <button class="btn w-28 bg-primary text-white" id="all-btn">All</button>
-        <button class="btn w-28" id="open-btn">Open</button>
-        <button class="btn w-28" id="closed-btn">Closed</button>
-    </section>
-
-    <!-- issue section -->
-
-    <section class="w-4/5  bg-white  shadow-lg mx-auto mt-7 p-4 rounded-sm flex justify-between">
-
-        <div class="left flex gap-2">
-            <div class="icon">
-                <img src="/assets/Aperture.png" alt="">
-            </div>
-            <div class="totalissues">
-                <!-- <h1 class="font-bold">50 Issues</h1>
-                <h2>Track and manage your project issues</h2> -->
-
-            </div>
-
-
-        </div>
-
-        <div class="right flex items-center gap-2">
-
-            <span class="w-3 h-3 bg-green-600 rounded-full"></span>
-            <p>Open</p>
-
-            <span class="w-3 h-3 bg-purple-400 rounded-full ml-4"></span>
-            <p>Closed</p>
-
-        </div>
+        </fieldset>
     </section>
 
 
-    <!-- card section -->
-    <section class="w-4/5  bg-white  shadow-lg mx-auto mt-1 p-4 grid grid-cols-4 gap-2" id="card-container">
-
-        <div>
-            <div class="cards   bg-white  shadow-2xl rounded-sm">
-
-                <!-- priroty  -->
-
-                <div class="priroty flex justify-between p-4">
-                    <div>
-                        <img src="/assets/Open-Status.png" alt="">
-                    </div>
-                    <!-- <div class="rounded-sm  bg-yellow-100 w-12 h-4 text-[10px] text-center text-[#D97706] "
-                        id="priority">
-                        <h1>Medium</h1>
-                    </div> -->
-
-
-                </div>
-
-                <!-- card body  -->
-
-                <div class="card-body">
-                    <h3 class="font-bold">Fix navigation menu on mobile devices</h3>
-                    <p>The navigation menu doesn't collapse properly on mobile devices...</p>
-
-                    <div class="card-foter flex justify-between">
-                        <div
-                            class="rounded-sm  bg-red-300 w-12 h-4 text-[10px]  flex justify-between px-1.5 items-center text-red-600 ">
-                            <i class="fa-solid fa-bug"></i>
-                            <h1>Bug</h1>
-                        </div>
-                        <div
-                            class="rounded-sm  bg-yellow-100 w-24 h-4 text-[10px]  flex justify-between px-1.5 items-center text-[#D97706] ">
-                            <i class="fa-solid fa-bug"></i>
-                            <h1>Help Wanted</h1>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="card-publisher pl-2 pb-1 ">
-
-                    <p class="font-normal text-[13px]">#1by john_doe </p>
-                    <p class="text-[13px]">1/15/2024</p>
-                </div>
-
-
-            </div>
-        </div>
-
-
-
-
-    </section>
-
-
-    <script src="/Javascript/index.js"></script>
-
-    <!-- Open the modal using ID.showModal() method -->
-
-    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-        <div class="modal-box">
-            <h3 class="text-lg font-bold">Hello!</h3>
-            <p class="py-4">Press ESC key or click the button below to close</p>
-            <div class="modal-action">
-                <form method="dialog">
-                    <!-- if there is a button in form, it will close the modal -->
-                    <button class="btn">Close</button>
-                </form>
-            </div>
-        </div>
-    </dialog>
+    <script src="/Javascript/loging.js"></script>
 </body>
 
 </html>
